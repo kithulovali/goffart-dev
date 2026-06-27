@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Mapped , mapped_column 
-from sqlalchemy import String , DateTime 
+from sqlalchemy import String , DateTime , List
 from datetime import datetime 
 from settings import Model
 
@@ -8,10 +8,11 @@ from settings import Model
 class Project(Model):
     __tablename__ = "projects"
 
-    id : Mapped[str] = mapped_column(primary_key=True, unique=True,index=True)
+    id : Mapped[int] = mapped_column(primary_key=True, unique=True,index=True)
     name : Mapped[str] = mapped_column(String(64))
     description : Mapped[str] = mapped_column(String(64))
     banner : Mapped[str] = mapped_column(String(64))
+    source : Mapped[List[str]] = mapped_column(String(64))
     created_at : Mapped[datetime] = mapped_column(DateTime(timezone=True))
 
     def __repr__(self):
