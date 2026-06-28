@@ -1,20 +1,27 @@
 from pydantic import BaseModel , Field ,EmailStr
 from typing import Optional , List 
 
-class Create_Project(BaseModel):
+class CreateProject(BaseModel):
     name :str = Field(max_length=200)
     description : str = Field(max_length=300)
-    source : List[str]
+    source :  Optional[List[str]]
     banner : Optional[str] 
 
-class Update_Project(BaseModel):
+class UpdateProject(BaseModel):
     name :str = Field(max_length=200)
     description : str = Field(max_length=300)
-    source : List[str]
+    source : Optional[List[str]]
     banner : Optional[str] 
 
-class Send_Message(BaseModel):
+class ProjectResponse(BaseModel):
+    name : str 
+    description :str 
+    source : str 
+    banner : str 
+class SendMessage(BaseModel):
     name :str = Field(max_length=30)
     email : EmailStr
-    message : str = Field(max_length=200)
+    message :Optional[str] = Field(max_length=200) 
+
+
 
