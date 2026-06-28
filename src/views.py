@@ -8,11 +8,11 @@ router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 router.mount("/static" , StaticFiles(directory="static"), name="static")
 
-@router.get("/")
+@router.get("/" , include_in_schema=False)
 async def home(request : Request):
     return templates.TemplateResponse(request , "home.html")
 
 
-@router.get("/project")
+@router.get("/project", include_in_schema=False)
 async def project_list(request : Request):
     return templates.TemplateResponse(request , "project_list.html")
