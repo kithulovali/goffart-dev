@@ -1,9 +1,9 @@
 from sqlalchemy.orm import DeclarativeBase , sessionmaker
 from sqlalchemy import  create_engine 
-from dotenv import load_env 
+from dotenv import load_dotenv
 import os 
 
-load_env()
+load_dotenv()
 class Model(DeclarativeBase):
     pass 
 
