@@ -36,4 +36,3 @@
     ├── settings.py
     └── test.py
 ```
-
