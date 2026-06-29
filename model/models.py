@@ -22,7 +22,7 @@ class Contact(Model):
 
     id : Mapped[int] = mapped_column(primary_key=True , unique=True , index=True , nullable=False)
     name : Mapped[str] = mapped_column(String(64),nullable=False)
-    email : Mapped[str]= mapped_column(String(64), nullable=False)
+    email : Mapped[str]= mapped_column(String(64), nullable=False, unique=True)
     text : Mapped[str] = mapped_column(Text , nullable=True)
     send_at : Mapped[datetime] = mapped_column(DateTime , server_default=func.now())
 
