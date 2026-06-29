@@ -1,0 +1,13 @@
+services :
+
+
+     app :
+          build : .
+          ports : 
+           - "8000:8000"
+          depens_on :
+           - database 
+          envirorment : 
+           DATABASE_URL = ${DATABASE_URL}
+
+

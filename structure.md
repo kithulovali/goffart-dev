@@ -1,0 +1,38 @@
+```
+└── 📁goffart-dev
+    └── 📁apis
+        └── 📁__pycache__
+            ├── views.cpython-311.pyc
+        ├── views.py
+    └── 📁model
+        └── 📁__pycache__
+            ├── models.cpython-311.pyc
+            ├── serializer.cpython-311.pyc
+        ├── models.py
+        ├── serializer.py
+    └── 📁src
+        └── 📁__pycache__
+            ├── views.cpython-311.pyc
+        ├── views.py
+    └── 📁static
+        └── 📁css
+        └── 📁images
+    └── 📁templates
+        ├── contact.html
+        ├── footer.html
+        ├── home.html
+        ├── Layout.html
+        ├── navbar.html
+        ├── project_list.html
+        ├── resume.html
+    ├── .env
+    ├── .gitignore
+    ├── docker-compose.yml
+    ├── Dockerfile
+    ├── goffart3.db
+    ├── main.py
+    ├── README.md
+    ├── requirements.txt
+    ├── settings.py
+    └── test.py
+```
